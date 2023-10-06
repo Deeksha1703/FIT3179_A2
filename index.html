@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Global Happiness Report</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
@@ -8,62 +9,76 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
   <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="style.css" media="all">
 </head>
+
 <body>
 
-<div class="page">
-  <h1>GLOBAL HAPPINESS REPORT 2021</h1>
-  <!-- pure grid group -->
-  <div class="pure-u-1">
-    <h2>Global Happiness Index 2021</h2>
-    <div id="vis1" class="vis-container"></div>
-    <br>
-    <br>
+  <div class="page">
+    <h1>GLOBAL HAPPINESS REPORT 2021</h1>
+    <!-- pure grid group -->
     <div class="pure-u-1">
-      <h2>Cracking the Code of National Well-Being: Factors Behind Happiness</h2>
-      <p>
-        In our pursuit of understanding the true sources of a nation's happiness, we delve into six critical factors that 
-        influence a country's well-being. Each of these factors isn't just a number; it's an essential piece of the puzzle, a 
-        strand intricately intertwined with the hopes and aspirations of a nation's people. These factors play a crucial role 
-        in shaping the overall happiness of the country.As we explore these six foundational elements, we uncover their profound
-        and interconnected impact on the collective joy experienced by a nation. These aren't isolated data points but rather 
-        the building blocks of societal prosperity and fulfillment.
-      </p>
-    </div>
+      <h2>Global Happiness Index 2021</h2>
+      <div id="vis1" class="vis-container"></div>
+      <br>
+      <br>
+      <div class="pure-u-1">
+        <h2>Cracking the Code of National Well-Being: Factors Behind Happiness</h2>
+        <p>
+          In our pursuit of understanding the true sources of a nation's happiness, we delve into six critical factors that
+          influence a country's well-being. Each of these factors isn't just a number; it's an essential piece of the
+          puzzle, a
+          strand intricately intertwined with the hopes and aspirations of a nation's people. These factors play a crucial
+          role
+          in shaping the overall happiness of the country.As we explore these six foundational elements, we uncover their
+          profound
+          and interconnected impact on the collective joy experienced by a nation. These aren't isolated data points but
+          rather
+          the building blocks of societal prosperity and fulfillment.
+        </p>
+      </div>
 
-    <div class="pure-u-1">
       <div class="pure-g">
+        <!-- Row 1: GDP, Social Support, and Generosity -->
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="GDP.png" alt="GDP" class="factor-pics" >
-            <h2 class="factorsHead">GPD per Capita</h2>
-            <p class="factors">Economic prosperity plays a pivotal role in the happiness of a nation. GDP reflects a country's 
-            financial strength and the potential for a higher quality of life. A robust GDP can provide resources for education, 
-            healthcare, and infrastructure, enhancing citizens' well-being. </p>
+            <img src="GDP.png" alt="GDP" class="factor-pics">
+            <h2 class="factorsHead">GDP per Capita</h2>
+            <p class="factors">Economic prosperity plays a pivotal role in the happiness of a nation. GDP reflects a
+              country's
+              financial strength and the potential for a higher quality of life. A robust GDP can provide resources for
+              education,
+              healthcare, and infrastructure, enhancing citizens' well-being.
+            </p>
           </div>
         </div>
 
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="Life_Expectancy.png" alt="Life Expectancy" class="factor-pics" >
-            <h2 class="factorsHead">Life Expectancy</h2>
-            <p class="factors">A long and healthy life is a universal aspiration. Life expectancy reflects the overall well-being of a 
-            nation's citizens. Access to quality healthcare, sanitation, and healthy lifestyles contribute to increased life expectancy, promoting national happiness. </p>
+            <img src="Social_Support.png" alt="Social Support" class="factor-pics">
+            <h2 class="factorsHead">Social Support</h2>
+            <p class="factors">Strong social bonds and a sense of belonging contribute to a nation's happiness. Social
+              support
+              systems are the foundation of well-being. Communities that prioritize social support tend to have citizens who
+              feel
+              safer, more connected, and emotionally fulfilled.
+            </p>
           </div>
         </div>
 
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="Generosity.png" alt="Generosity" class="factor-pics" >
+            <img src="Generosity.png" alt="Generosity" class="factor-pics">
             <h2 class="factorsHead">Generosity</h2>
-            <p class="factors">The generosity of a society fosters a sense of community and solidarity. It's a measure of the 
-            willingness to support one another, making the world a happier place. Acts of kindness and generosity create a 
-            ripple effect, positively impacting the happiness of individuals and the nation as a whole.</p>
+            <p class="factors">The generosity of a society fosters a sense of community and solidarity. It's a measure of
+              the
+              willingness to support one another, making the world a happier place. Acts of kindness and generosity create a
+              ripple effect, positively impacting the happiness of individuals and the nation as a whole.</p>
           </div>
         </div>
       </div>
@@ -71,33 +86,40 @@
 
     <div class="pure-u-1">
       <div class="pure-g">
+        <!-- Row 2: Life Expectancy, Freedom, and Corruption -->
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="Social_Support.png" alt="Social Support" class="factor-pics" >
-            <h2 class="factorsHead">Social Support</h2>
-            <p class="factors">Strong social bonds and a sense of belonging contribute to a nation's happiness. Social support 
-            systems are the foundation of well-being. Communities that prioritize social support tend to have citizens who feel 
-            safer, more connected, and emotionally fulfilled.</p>
+            <img src="Life_Expectancy.png" alt="Life Expectancy" class="factor-pics">
+            <h2 class="factorsHead">Life Expectancy</h2>
+            <p class="factors">A long and healthy life is a universal aspiration. Life expectancy reflects the overall
+              well-being of a
+              nation's citizens. Access to quality healthcare, sanitation, and healthy lifestyles contribute to increased life
+              expectancy, promoting national happiness.
+            </p>
           </div>
         </div>
 
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="Freedom.png" alt="Freedom" class="factor-pics" >
+            <img src="Freedom.png" alt="Freedom" class="factor-pics">
             <h2 class="factorsHead">Freedom</h2>
-            <p class="factors">Freedom empowers individuals to pursue their aspirations and live life on their terms. It's a 
-            fundamental ingredient in the recipe for happiness. The ability to express oneself freely, make choices, and 
-            participate in society without fear fosters a sense of fulfillment and contentment.</p>
+            <p class="factors">Freedom empowers individuals to pursue their aspirations and live life on their terms. It's a
+              fundamental ingredient in the recipe for happiness. The ability to express oneself freely, make choices, and
+              participate in society without fear fosters a sense of fulfillment and contentment.
+            </p>
           </div>
         </div>
 
         <div class="pure-u-1-3">
           <div class="factors-box">
-            <img src="Corruption.png" alt="Corruption" class="factor-pics" >
+            <img src="Corruption.png" alt="Corruption" class="factor-pics">
             <h2 class="factorsHead">Corruption</h2>
-            <p class="factors">A transparent and accountable society is essential for happiness. Reducing corruption helps build 
-            trust and stability. A low level of corruption creates an environment where citizens can rely on fair institutions 
-            and have confidence in their nation's future.</p>
+            <p class="factors">A transparent and accountable society is essential for happiness. Reducing corruption helps
+              build
+              trust and stability. A low level of corruption creates an environment where citizens can rely on fair
+              institutions
+              and have confidence in their nation's future.
+            </p>
           </div>
         </div>
       </div>
@@ -110,13 +132,15 @@
 
 <script type="text/javascript">
   var specVis1 = "chloropleth_map.vg.json";
-  var specVis2= "scatter_plot.vg.json";
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+  var specVis2 = "scatter_plot.vg.json";
+  vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-  vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
+
 </body>
+
 </html>
