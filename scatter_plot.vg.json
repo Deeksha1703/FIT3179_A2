@@ -156,15 +156,30 @@
     {
       "mark": {
         "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 20,
+        "align": "center",
+        "baseline": "top",
+        "dy": 10,
+        "fontSize": 14,
         "fontStyle": "italic",
-        "fontWeight":"bold"
+        "fontWeight": "bold"
       },
       "encoding": {
-        "text": {"field": "Country_Name", "type": "nominal"},
+        "text": {
+          "field": "Country_Name",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "Ladder_Score",
+          "type": "quantitative",
+          "title": "Happiness Index",
+          "axis": {"tickCount": 10}
+        },
+        "y": {
+          "field": "Healthy_Life_Expectancy",
+          "type": "quantitative",
+          "title": "Life Expectancy",
+          "axis": {"tickCount": 7}
+        },
         "color": {"value": "black"},
         "opacity": {
           "condition": {
