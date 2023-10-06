@@ -1,6 +1,6 @@
 html,
 body{
-    background-color: #f8d7a1
+    background-color: #607D8B
   }
 h1 {
     text-align: center;
@@ -27,7 +27,7 @@ p {
    
 .page{
     width: 2300px;    
-    background-color: #edf6f9 ;   
+    background-color: #dcf1f7;   
     margin: auto;
     padding: 50px;
     padding-top: 35px;
