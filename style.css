@@ -4,24 +4,25 @@ body{
   }
 h1 {
     text-align: center;
-    color: #293241;
+    color: black;
     font-size: 80px;
-    font-family: 'Rampart One', cursive;
+    font-family: 'Roboto Slab', sans-serif;
     
 }
 h2 {
     text-align: center;
     color: #028090;
     font-size: 35px;
-    font-family: 'Rampart One', cursive;
+    font-family: Georgia, Times New Roman, serif;
     font-style: italic;
     
 }
 
 p {
-    color: #6d6875;
+    color: black;
     font-size: 25px;
     font-family: 'Quicksand', sans-serif;
+    font-style: italic;
 }
    
 .page{
@@ -51,16 +52,18 @@ margin-bottom: 25px;
     font-size: 14px;
 }
 .factors{
+	
     font-family: 'Quicksand', sans-serif;
 	font-size: 25px;
     text-align: justify;
     color: #6d6875;
-    
 }
 .factorsHead{
     text-align: center;
+
     color: #028090;
     font-size: 35px;
+    
 }
 .factors-box{
     padding-left: 20px;
