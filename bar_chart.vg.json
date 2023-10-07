@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Top 10 Happiest Countries",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "datum.Ladder_Score != null"},
+    {"window": [{"op": "rank", "as": "rank"}], "sort": [{"field": "Ladder_Score", "order": "descending"}]},
+    {"filter": "datum.rank <= 10"}  
+  ],
+  "mark": {
+    "type": "bar",
+    "orient": "vertical",
+    "tooltip": true,
+    "color": "red"
+  },
+  "encoding": {
+    "y": {
+      "field": "Ladder_Score",
+      "type": "quantitative",
+      "axis": {"title": "Happiness Index"}
+    },
+    "x": {
+      "field": "Country_Name",
+      "type": "nominal",
+      "sort": "-y", 
+      "axis": {"title": "Country"}
+    },
+    "tooltip": [
+      {"field": "Country_Name", "title": "Country"},
+      {"field": "Regional_Indicator", "title": "Continent"},
+      {"field": "population", "title": "Population"},
+      {"field": "Ladder_Score", "title": "Happiness Index"}
+    ]
+  }
+}
