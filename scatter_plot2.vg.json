@@ -125,17 +125,17 @@
                 "South Asia"
               ],
               "range": [
-                "#1f77b4",
-                "#ff7f0e",
-                "#2ca02c",
-                "#d62728",
-                "#9467bd",
-                "#8c564b",
-                "#e377c2",
-                "#7f7f7f",
-                "#bcbd22",
-                "#17becf",
-                "#9edae5"
+                "#0072B2",
+                "#D55E00",
+                "#009E73",
+                "#CC79A7 ",
+                "#F0E442 ",
+                "#56B4E9",
+                "#00988E",
+                "#E69F00",
+                "#0072B2 ",
+                "#ed3309",
+                "#0f8005"
               ]
             }
           },
@@ -145,7 +145,7 @@
           },
           "tooltip": [
             {"field": "Country_Name", "type": "nominal", "title": "Country Name"},
-            {"field": "Regional_Indicator", "type": "nominal", "title": "Regional Indicator"},
+            {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
             {"field": "Ladder_Score", "type": "quantitative", "format": ",", "title": "Happiness Index"},
             {"field": "population", "type": "quantitative", "title": "Population", "format": ",.0f"},
             {"field": "Social_Support", "type": "quantitative", "title": "Social Support", "format": ",.2f"}
