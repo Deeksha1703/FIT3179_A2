@@ -1,8 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Top 10 Least Happiest Countries",
-    "width": "container",
-    "height": 600,
     "data": {
       "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json",
       "format": {"type": "json"}
@@ -10,7 +7,7 @@
     "transform": [
       {"filter": "datum.Ladder_Score != null"},
       {"window": [{"op": "rank", "as": "rank"}], "sort": [{"field": "Ladder_Score", "order": "ascending"}]},
-      {"filter": "datum.rank <= 10"} 
+      {"filter": "datum.rank <= 10"}  
     ],
     "mark": {
       "type": "bar",
@@ -27,7 +24,7 @@
       "x": {
         "field": "Country_Name",
         "type": "nominal",
-        "sort": "ascending",
+        "sort": "ascending",  
         "axis": {"title": "Country"}
       },
       "tooltip": [
@@ -36,6 +33,12 @@
         {"field": "population", "title": "Population"},
         {"field": "Ladder_Score", "title": "Happiness Index"}
       ]
+    },
+    "config": {
+      "bar": {
+        "bandPaddingInner": 0.2,  
+        "bandPaddingOuter": 0.1   
+      }
     }
   }
   
