@@ -41,6 +41,18 @@
     "bar": {
       "bandPaddingInner": 0.2,  
       "bandPaddingOuter": 0.1   
-    }
+    },
+    "axis": {
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "labelFontSize": 18,
+        "titleFontSize": 16,
+        "labelLimit": 0
+      },
+      "title": {
+        "font": "sans-serif",
+        "subtitleFont": "sans-serif",
+        "fontSize": 20
+      }
   }
 }
