@@ -49,9 +49,17 @@
             "title": "Median Freedom Score",
             "scale": {"domain": [0, 1]}
           },
-          "color": {
-            "field": "Regional_Indicator",
-            "type": "nominal",
+         "fillOpacity": {
+            "condition": {"test": "datum.Freedom<datum.Average_Freedom ", "value": 1},
+            "value": 0.4
+          },   
+        "strokeWidth" :{
+            "condition": {"test": "datum.Freedom <datum.Average_Freedom ", "value":1},
+            "value": 0   },
+            "color": {
+                "field": "Regional_Indicator",
+                "title": "Region",
+                "type": "nominal",
             "legend": {"direction": "horizontal", "orient": "top"},
             "scale": {
               "domain": [
