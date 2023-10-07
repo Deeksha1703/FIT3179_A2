@@ -1,82 +1,81 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple radial chart with embedded data.",
-    "width" :"container",
-    "height":500,
-    "data": {"url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json"},
-    "config": {
-      "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":15,"titleFontSize":20,"labelLimit": 0},
-      "legend": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":16,"titleFontSize":16,"labelLimit": 0},
-      "header": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":20,"titleFontSize":15},
-      "title": {"font": "sans-serif", "subtitleFont": "sans-serif","fontSize":20}
+    "width": "container",
+    "height": 500,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json"
     },
-    "params": [
-      {
-        "name": "Year",
-        "value" : 2018,
-        "bind": {
-          "input": "range",
-          "min": 2018,
-          "max": 2021,
-          "step": 1,
-          "name": "Year: "
-        }
+    "config": {
+      "axis": {
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "labelFontSize": 15,
+        "titleFontSize": 20,
+        "labelLimit": 0
+      },
+      "legend": {
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "labelFontSize": 16,
+        "titleFontSize": 16,
+        "labelLimit": 0
+      },
+      "header": {
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "labelFontSize": 20,
+        "titleFontSize": 15
+      },
+      "title": {
+        "font": "sans-serif",
+        "subtitleFont": "sans-serif",
+        "fontSize": 20
       }
-    ],
-    "transform": [
-      {"filter": "datum.Year== Year"},
-      {"filter":"datum.Country_Name!='Central African Republic'"},
+    },
+    "layer": [
       {
-        "joinaggregate": [{
-          "op": "average",
-          "field": "Freedom",
-          "as": "Average_Freedom"
-        }]
-      }
-      
-    ],
-    "layer": [{
-      "mark": {"type":"bar","stroke": "black"},
-      "encoding": {
-        "x": {
-          "field": "Country_Name",
-          "type": "ordinal",
-          "title" :"Country Name",
-          "sort" : { "field": "Regional_Indicator"}
-        },
-        "y": {
-          "field": "Freedom",
-          "type": "quantitative",
-          "title" : "Median Freedom Score",
-          "scale": {"domain": [0, 1]}  
-        },
-        "fillOpacity": {
-          "condition": {"test": "datum.Freedom <datum.Average_Social ", "value": 1},
-          "value": 0.4
-        },   
-        "strokeWidth" :{
-          "condition": {"test": "datum.Freedom <datum.Average_Social ", "value":1},
-          "value": 0
-        },
-        "color": {
-          "field": "Regional_Indicator",
-          "type": "nominal",
-          "legend":{"direction": "horizontal","orient": "top"},
-          "scale": {
-            "domain": [
-              "Western Europe",
-              "North America",
-              "Australia and New Zealand",
-              "Middle East and North Africa",
-              "Latin America and Caribbean",
-              "Central and Eastern Europe",
-              "East Asia",
-              "Southeast Asia",
-              "Commonwealth of Independent States",
-              "Sub-Saharan Africa",
-              "South Asia"
-            ],
-            "range": [
+        "mark": {"type": "bar", "stroke": "black"},
+        "encoding": {
+          "x": {
+            "field": "Country_Name",
+            "type": "ordinal",
+            "title": "Country Name",
+            "sort": {"field": "Regional_Indicator"}
+          },
+          "y": {
+            "field": "Freedom",
+            "type": "quantitative",
+            "title": "Median Freedom Score",
+            "scale": {"domain": [0, 1]}
+          },
+          "fillOpacity": {
+            "condition": {"test": "datum.Freedom < datum.Average_Freedom", "value": 1},
+            "value": 0.4
+          },
+          "strokeWidth": {
+            "condition": {"test": "datum.Freedom < datum.Average_Freedom", "value": 1},
+            "value": 0
+          },
+          "color": {
+            "field": "Regional_Indicator",
+            "type": "nominal",
+            "legend": {"direction": "horizontal", "orient": "top"},
+            "scale": {
+              "domain": [
+                "Western Europe",
+                "North America",
+                "Australia and New Zealand",
+                "Middle East and North Africa",
+                "Latin America and Caribbean",
+                "Central and Eastern Europe",
+                "East Asia",
+                "Southeast Asia",
+                "Commonwealth of Independent States",
+                "Sub-Saharan Africa",
+                "South Asia"
+              ],
+              "range": [
                 "#1f77b4",
                 "#ff7f0e",
                 "#2ca02c",
@@ -88,34 +87,34 @@
                 "#bcbd22",
                 "#17becf",
                 "#9c9c9c"
-            ]
-          }
-        },
-        "tooltip": [
-          {"field": "Country_Name", "type": "nominal","title":"Country Name"},
-          {"field": "Regional_Indicator", "type": "nominal","title":"Region"},
-          {"field" : "Freedom","type": "quantitative","title":"Freedom Score"} ,
-          {"field" : "Year","type": "ordinal"}
-            
-        ]
+              ]
+            }
+          },
+          "tooltip": [
+            {"field": "Country_Name", "type": "nominal", "title": "Country Name"},
+            {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
+            {"field": "Freedom", "type": "quantitative", "title": "Freedom Score"},
+            {"field": "Year", "type": "ordinal"}
+          ]
+        }
+      },
+      {
+        "mark": "rule",
+        "name": "ruler",
+        "encoding": {
+          "y": {
+            "aggregate": "average",
+            "field": "Freedom",
+            "type": "quantitative"
+          },
+          "color": {"value": "firebrick"},
+          "size": {"value": 5},
+          "tooltip": [
+            {"field": "Freedom", "aggregate": "median", "type": "quantitative", "format": ".2f", "title": "World Median Freedom Score"}
+          ],
+          "strokeDash": {"value": [8, 8]}
+        }
       }
-    }, {
-      "mark": "rule",
-      "name": "ruler",
-      "encoding": {
-        "y": {
-          "aggregate": "average",
-          "field": "Freedom",
-          "type": "quantitative"
-        },
-        "color": {"value": "firebrick"},
-        "size": {"value": 5},
-        "tooltip" :[
-          {"field":"Freedom","aggregate":"median","type": "quantitative","format":".2f","title":"World Median Freedom Score"}
-        ],
-        "strokeDash": {"value":[8,8]}
-      }
-    }
-  ]
+    ]
   }
   
