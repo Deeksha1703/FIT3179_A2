@@ -3,7 +3,7 @@
     "description": "A simple radial chart with embedded data.",
     "width" :"container",
     "height":500,
-    "data": {"url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data2.json"},
+    "data": {"url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json"},
     "config": {
       "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":15,"titleFontSize":20,"labelLimit": 0},
       "legend": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":16,"titleFontSize":16,"labelLimit": 0},
