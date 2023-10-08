@@ -49,17 +49,18 @@
             "title": "Median Freedom Score",
             "scale": {"domain": [0, 1]}
           },
-         "fillOpacity": {
+          "fillOpacity": {
             "condition": {"test": "datum.Freedom<datum.Average_Freedom ", "value": 1},
             "value": 0.4
-          },   
-        "strokeWidth" :{
-            "condition": {"test": "datum.Freedom <datum.Average_Freedom ", "value":1},
-            "value": 0   },
-            "color": {
-                "field": "Regional_Indicator",
-                "title": "Region",
-                "type": "nominal",
+          },
+          "strokeWidth": {
+            "condition": {"test": "datum.Freedom <datum.Average_Freedom ", "value": 1},
+            "value": 0
+          },
+          "color": {
+            "field": "Regional_Indicator",
+            "title": "Region",
+            "type": "nominal",
             "legend": {"direction": "horizontal", "orient": "top"},
             "scale": {
               "domain": [
@@ -99,7 +100,7 @@
         }
       },
       {
-        "mark": "rule",
+        "mark": {"type": "line", "stroke": "firebrick"},
         "name": "ruler",
         "encoding": {
           "y": {
@@ -107,12 +108,9 @@
             "field": "Freedom",
             "type": "quantitative"
           },
-          "color": {"value": "firebrick"},
-          "size": {"value": 5},
           "tooltip": [
             {"field": "Freedom", "aggregate": "median", "type": "quantitative", "format": ".2f", "title": "World Median Freedom Score"}
-          ],
-          "strokeDash": {"value": [8, 8]}
+          ]
         }
       }
     ]
