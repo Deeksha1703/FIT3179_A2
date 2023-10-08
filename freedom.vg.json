@@ -54,7 +54,14 @@
             "#f2e63f"
           ]
         },
-        "title": "Region"
+        "title": "Region",
+        "legend": {
+          "selection": "continent_highlight"
+        }
+      },
+      "opacity": {
+        "condition": {"selection": "continent_highlight", "value": 0.6},
+        "value": 0.2
       }
     },
     "selection": {
@@ -62,6 +69,11 @@
         "type": "interval",
         "encodings": ["x"],
         "bind": "scales"
+      },
+      "continent_highlight": {
+        "type": "multi",
+        "fields": ["Regional_Indicator"],
+        "bind": "legend"
       }
     },
     "title": "Average Freedom Over the Years by Region (2015-2021)"
