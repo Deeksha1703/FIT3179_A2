@@ -26,6 +26,11 @@
         "titleFont": "sans-serif",
         "labelFontSize": 20,
         "titleFontSize": 15
+      },
+      "title": {
+        "font": "sans-serif", 
+        "subtitleFont": "sans-serif",
+        "fontSize":20
       }
     },
     "params": [
@@ -106,6 +111,7 @@
           },
           "color": {
             "field": "Regional_Indicator",
+            "title": "Region",
             "type": "nominal",
             "scale": {
               "domain": [
