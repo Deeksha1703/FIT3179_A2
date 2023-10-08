@@ -48,13 +48,6 @@
         "type": "quantitative",
         "title" : "Median Freedom"
       },
-      "fillOpacity": {
-        "condition": {"test": "datum.Freedom <datum.Average_Social ", "value": 1},
-        "value": 0.4
-      },   
-      "strokeWidth" :{
-        "condition": {"test": "datum.Freedom <datum.Average_Social ", "value":1},
-        "value": 0   },
       "color": {
         "field": "Regional_Indicator",
         "type": "nominal",
@@ -89,7 +82,7 @@
       },
       "tooltip": [
         {"field": "Country_Name", "type": "nominal","title":"Country Name"},
-        {"field": "Regional_Indicator", "type": "nominal","title":"Regional Indicator"},
+        {"field": "Regional_Indicator", "type": "nominal","title":"Region"},
         {"field" : "Freedom","type": "quantitative","title":"Freedom Score"} ,
         {"field" : "Year","type": "ordinal"}
           
