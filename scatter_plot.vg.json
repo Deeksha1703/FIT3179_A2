@@ -3,7 +3,7 @@
   "width": "container",
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
+    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json"
   },
   "config": {
     "axis": {

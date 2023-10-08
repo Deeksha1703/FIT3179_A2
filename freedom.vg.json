@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
+    },
+    "transform": [
+      {
+        "aggregate": [
+          {"op": "mean", "field": "Freedom", "as": "Average_Freedom"}
+        ],
+        "groupby": ["Year", "Regional_Indicator"]
+      }
+    ],
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "Average_Freedom",
+        "type": "quantitative",
+        "title": "Average Freedom Score"
+      },
+      "color": {
+        "field": "Regional_Indicator",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "Western Europe",
+            "North America",
+            "Australia and New Zealand",
+            "Middle East and North Africa",
+            "Latin America and Caribbean",
+            "Central and Eastern Europe",
+            "East Asia",
+            "Southeast Asia",
+            "Commonwealth of Independent States",
+            "Sub-Saharan Africa",
+            "South Asia"
+          ],
+          "range": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf",
+            "#f2e63f"
+          ]
+        },
+        "title": "Region"
+      }
+    },
+    "selection": {
+      "brush": {
+        "type": "interval",
+        "encodings": ["x"],
+        "bind": "scales"
+      }
+    },
+    "title": "Average Freedom Over the Years by Region (2015-2021)"
+  }
+  
