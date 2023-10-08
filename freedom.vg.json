@@ -2,7 +2,7 @@
   "description": "A simple radial chart with embedded data.",
   "width" :"container",
   "height":500,
-  "data": {"url": "https://raw.githubusercontent.com/sookmun/FIT3179_Assignment2/main/Data/csvjson.json"},
+  "data": {"url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_W10/main/country_data.json"},
   "config": {
     "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":15,"titleFontSize":20,"labelLimit": 0},
     "legend": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":16,"titleFontSize":16,"labelLimit": 0},
@@ -12,10 +12,10 @@
   "params": [
     {
       "name": "Year",
-      "value" : 2018,
+      "value" : 2016,
       "bind": {
         "input": "range",
-        "min": 2018,
+        "min": 2016,
         "max": 2021,
         "step": 1,
         "name": "Year: "
@@ -29,7 +29,7 @@
       "joinaggregate": [{
         "op": "average",
         "field": "Freedom",
-        "as": "Average_Social"
+        "as": "Average_Freedom"
       }]
     }
     
@@ -108,7 +108,7 @@
       "color": {"value": "firebrick"},
       "size": {"value": 5},
       "tooltip" :[
-        {"field":"Freedom","aggregate":"median","type": "quantitative","format":".2f","title":"World Median Social Support Score"}
+        {"field":"Freedom","aggregate":"median","type": "quantitative","format":".2f","title":"World Median Freedom Score"}
       ],
       "strokeDash": {"value":[8,8]}
     }
