@@ -35,7 +35,7 @@
     "transform": [
       {
         "aggregate": [
-          {"op": "mean", "field": "Freedom", "as": "Average_Freedom"}
+          {"op": "mean", "field": "Generosity", "as": "Average_Generosity"}
         ],
         "groupby": ["Year", "Regional_Indicator"]
       }
@@ -54,9 +54,9 @@
         "title": "Year"
       },
       "y": {
-        "field": "Average_Freedom",
+        "field": "Average_Generosity",
         "type": "quantitative",
-        "title": "Average Freedom"
+        "title": "Average Generosity"
       },
       "color": {
         "field": "Regional_Indicator",
@@ -100,7 +100,7 @@
       },
       "tooltip": [
         {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
-        {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom"},
+        {"field": "Average_Generosity", "type": "quantitative", "title": "Average Generosity"},
         {"field": "Year", "type": "ordinal", "title": "Year"}
       ]
     },
