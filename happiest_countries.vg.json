@@ -1,36 +1,24 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json" 
+    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
   },
   "transform": [
     {
-      "filter": {
-        "field": "Year",
-        "range": [2018, 2021]
-      }
+      "filter": "datum.Year === 2021"
     },
     {
       "window": [
-        {
-          "op": "rank",
-          "as": "rank"
-        }
+        {"op": "rank", "as": "rank"}
       ],
       "sort": [
-        {
-          "field": "Ladder_Score",
-          "order": "descending"
-        }
+        {"field": "Ladder_Score", "order": "descending"}
       ]
     },
     {
-      "filter": {
-        "field": "rank",
-        "lte": 10
-      }
+      "filter": "datum.rank <= 10"
     }
   ],
   "mark": "bar",
@@ -44,18 +32,6 @@
       "field": "Ladder_Score",
       "type": "quantitative",
       "title": "Happiness Index"
-    }
-  },
-  "selection": {
-    "yearSlider": {
-      "type": "interval",
-      "fields": ["Year"],
-      "bind": {
-        "input": "range",
-        "min": 2018,
-        "max": 2021,
-        "step": 1
-      }
     }
   }
 }
