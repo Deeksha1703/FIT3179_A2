@@ -64,7 +64,7 @@
             "field": "Regional_Indicator",
             "type": "nominal"
           },
-          "color": {"value": "#A9A9A9"},
+          "color": {"value": "#db646f"},
           "tooltip": [
             {"field": "Regional_Indicator", "type": "nominal","title":"Regional Indicator"},
             {"field" : "Year","type": "ordinal"}
@@ -83,7 +83,7 @@
             "type": "ordinal",
             "scale": {
               "domain": [2015, 2021],
-              "range": ["#85fc68", "#fc4c3d"]
+              "range": ["#e6959c", "#911a24"]
             },
             "title": "Year"
           },
