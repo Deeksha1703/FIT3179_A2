@@ -100,7 +100,7 @@
     },
     "tooltip": [
       {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
-      {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom Score"},
+      {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom"},
       {"field": "Year", "type": "ordinal", "title": "Year"}
     ]
   },
