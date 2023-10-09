@@ -100,7 +100,7 @@
       },
       "tooltip": [
         {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
-        {"field": "Average_Generosity", "type": "quantitative", "title": "Average Generosity Score"},
+        {"field": "Average_Generosity", "type": "quantitative", "title": "Average Generosity"},
         {"field": "Year", "type": "ordinal", "title": "Year"}
       ]
     },
