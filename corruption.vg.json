@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/sookmun/FIT3179_Assignment2/main/Data/csvjson.json"},
-    "height" :600,
+    "height" :700,
     "width" :"container",
     "title": "Corruption in Different Regions Over the Years",
     "config": {
