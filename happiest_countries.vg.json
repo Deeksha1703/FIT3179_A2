@@ -67,7 +67,7 @@
   ],
   "mark": {
     "type": "bar",
-    "size": 10  
+    "size": 20  
   },
   "encoding": {
     "x": {
