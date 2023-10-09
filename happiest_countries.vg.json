@@ -5,9 +5,52 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
   },
+  "config": {
+    "axis": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 18,
+      "titleFontSize": 16,
+      "labelLimit": 0
+    },
+    "legend": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 16,
+      "titleFontSize": 15,
+      "labelLimit": 0
+    },
+    "header": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 20,
+      "titleFontSize": 15
+    },
+    "title": {
+      "font": "sans-serif",
+      "subtitleFont": "sans-serif",
+      "fontSize": 20
+    }
+  },
+  "params": [
+    {
+      "name": "Year",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2018,
+        "max": 2021,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
   "transform": [
     {
-      "filter": "datum.Year === 2021"
+      "filter": "datum.Year === Year"
+    },
+    {
+      "filter": "datum.Country_Name !== 'Central African Republic'"
     },
     {
       "window": [
@@ -21,17 +64,53 @@
       "filter": "datum.rank <= 10"
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
       "field": "Country_Name",
       "type": "nominal",
-      "title": "Country"
+      "title": "Country",
+      "sort": "-y"
     },
     "y": {
       "field": "Ladder_Score",
       "type": "quantitative",
       "title": "Happiness Index"
+    },
+    "color": {
+      "field": "Regional_Indicator",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Western Europe",
+          "North America",
+          "Australia and New Zealand",
+          "Middle East and North Africa",
+          "Latin America and Caribbean",
+          "Central and Eastern Europe",
+          "East Asia",
+          "Southeast Asia",
+          "Commonwealth of Independent States",
+          "Sub-Saharan Africa",
+          "South Asia"
+        ],
+        "range": [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#7f7f7f",
+          "#bcbd22",
+          "#17becf",
+          "#f2e63f"
+        ]
+      },
+      "title": "Region"
     }
   }
 }
