@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A vertical box plot showing median, min, and max life expectancy by region in 2021.",
+  "height": 600,
+  "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/life_expectancy.json",
     "format": {
