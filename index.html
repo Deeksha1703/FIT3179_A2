@@ -202,6 +202,13 @@
       </div>
     </div>
 
+    <h2>Corruption and Life Expectancy Trends Across Different Regions</h2>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis8" class="vis-container"></div>
+      </div>
+    </div>
+
     <h2>Top 10 Happiest Countries and Least Happiest Countries</h2>
 
     <div class="pure-u-1">
@@ -247,6 +254,7 @@
   var specVis5 = "generosity.vg.json";
   var specVis6 = "happiest_countries.vg.json";
   var specVis7 = "least_happiest_countries.vg.json";
+  var specVis8 = "corruption.vg.json";
   vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -266,6 +274,9 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  vegaEmbed('#vis8', specVis7, { "actions": false }).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
