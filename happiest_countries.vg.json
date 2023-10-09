@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "title": "Top 10 Happiest Countries",
   "height": 600,
@@ -36,10 +36,10 @@
   "params": [
     {
       "name": "Year",
-      "value": 2018,
+      "value": 2021,
       "bind": {
         "input": "range",
-        "min": 2018,
+        "min": 2015,
         "max": 2021,
         "step": 1,
         "name": "Year: "
@@ -63,6 +63,10 @@
     },
     {
       "filter": "datum.rank <= 10"
+    },
+    {
+      "calculate": "Year === 2021 ? 5.53 : Year === 2020 ? 5.47 : Year === 2019 ? 5.41 : Year === 2018 ? 5.38 : Year === 2017 ? 5.35 : Year === 2016 ? 5.37 : Year === 2015 ? 5.37 : null",
+      "as": "redLineValue"
     }
   ],
   "layer": [
@@ -132,8 +136,7 @@
       },
       "encoding": {
         "y": {
-          "aggregate": "mean",
-          "field": "Ladder_Score",
+          "field": "redLineValue",
           "type": "quantitative",
           "title": "World Average Happiness Index"
         }

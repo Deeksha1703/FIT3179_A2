@@ -39,7 +39,7 @@
       "value": 2018,
       "bind": {
         "input": "range",
-        "min": 2018,
+        "min": 2015,
         "max": 2021,
         "step": 1,
         "name": "Year: "
@@ -63,20 +63,24 @@
     },
     {
       "filter": "datum.rank <= 10"
+    },
+    {
+      "calculate": "Year === 2021 ? 5.53 : Year === 2020 ? 5.47 : Year === 2019 ? 5.41 : Year === 2018 ? 5.38 : Year === 2017 ? 5.35 : Year === 2016 ? 5.37 : Year === 2015 ? 5.37 : null",
+      "as": "redLineValue"
     }
   ],
   "layer": [
     {
       "mark": {
         "type": "bar",
-        "size": 40  
+        "size": 40
       },
       "encoding": {
         "x": {
           "field": "Country_Name",
           "type": "nominal",
           "title": "Country",
-          "sort": "y"  
+          "sort": "y"
         },
         "y": {
           "field": "Ladder_Score",
@@ -132,8 +136,7 @@
       },
       "encoding": {
         "y": {
-          "aggregate": "mean",
-          "field": "Ladder_Score",
+          "field": "redLineValue",
           "type": "quantitative",
           "title": "World Average Happiness Index"
         }
