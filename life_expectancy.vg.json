@@ -65,7 +65,9 @@
     "x": {
       "field": "Regional_Indicator",
       "type": "nominal",
-      "title": "Region"
+      "title": "Region",
+      "sort": ["Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Southeast Asia", "East Asia", "Sub-Saharan Africa", "Commonwealth of Independent States", "Central and Eastern Europe", "x"]
+      
     },
     "color": {
       "field": "Regional_Indicator",
