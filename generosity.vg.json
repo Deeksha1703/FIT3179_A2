@@ -40,7 +40,13 @@
         "groupby": ["Year", "Regional_Indicator"]
       }
     ],
-    "mark": "line",
+    "mark": {
+      "type": "line",
+      "point": {
+        "filled": false,
+        "fill": "white"
+      }
+    },
     "encoding": {
       "x": {
         "field": "Year",
@@ -91,7 +97,12 @@
       "opacity": {
         "condition": {"selection": "continent_highlight", "value": 0.6},
         "value": 0.2
-      }
+      },
+      "tooltip": [
+        {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
+        {"field": "Average_Generosity", "type": "quantitative", "title": "Average Generosity Score"},
+        {"field": "Year", "type": "ordinal", "title": "Year"}
+      ]
     },
     "selection": {
       "brush": {

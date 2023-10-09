@@ -1,110 +1,120 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 600,
-    "data": {
-      "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
+  },
+  "config": {
+    "axis": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 18,
+      "titleFontSize": 16,
+      "labelLimit": 0
     },
-    "config": {
-      "axis": {
-        "labelFont": "sans-serif",
-        "titleFont": "sans-serif",
-        "labelFontSize": 18,
-        "titleFontSize": 16,
-        "labelLimit": 0
-      },
-      "legend": {
-        "labelFont": "sans-serif",
-        "titleFont": "sans-serif",
-        "labelFontSize": 16,
-        "titleFontSize": 15,
-        "labelLimit": 0
-      },
-      "header": {
-        "labelFont": "sans-serif",
-        "titleFont": "sans-serif",
-        "labelFontSize": 20,
-        "titleFontSize": 15
-      },
-      "title": {
-        "font": "sans-serif", 
-        "subtitleFont": "sans-serif",
-        "fontSize":20
-      }
+    "legend": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 16,
+      "titleFontSize": 15,
+      "labelLimit": 0
     },
-    "transform": [
-      {
-        "aggregate": [
-          {"op": "mean", "field": "Freedom", "as": "Average_Freedom"}
+    "header": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 20,
+      "titleFontSize": 15
+    },
+    "title": {
+      "font": "sans-serif",
+      "subtitleFont": "sans-serif",
+      "fontSize": 20
+    }
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {"op": "mean", "field": "Freedom", "as": "Average_Freedom"}
+      ],
+      "groupby": ["Year", "Regional_Indicator", "Country"]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": false,
+      "fill": "white"
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Average_Freedom",
+      "type": "quantitative",
+      "title": "Average Freedom Score"
+    },
+    "color": {
+      "field": "Regional_Indicator",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Western Europe",
+          "North America",
+          "Australia and New Zealand",
+          "Middle East and North Africa",
+          "Latin America and Caribbean",
+          "Central and Eastern Europe",
+          "East Asia",
+          "Southeast Asia",
+          "Commonwealth of Independent States",
+          "Sub-Saharan Africa",
+          "South Asia"
         ],
-        "groupby": ["Year", "Regional_Indicator"]
-      }
-    ],
-    "mark": "line",
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "ordinal",
-        "title": "Year"
+        "range": [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#7f7f7f",
+          "#bcbd22",
+          "#17becf",
+          "#f2e63f"
+        ]
       },
-      "y": {
-        "field": "Average_Freedom",
-        "type": "quantitative",
-        "title": "Average Freedom Score"
-      },
-      "color": {
-        "field": "Regional_Indicator",
-        "type": "nominal",
-        "scale": {
-          "domain": [
-            "Western Europe",
-            "North America",
-            "Australia and New Zealand",
-            "Middle East and North Africa",
-            "Latin America and Caribbean",
-            "Central and Eastern Europe",
-            "East Asia",
-            "Southeast Asia",
-            "Commonwealth of Independent States",
-            "Sub-Saharan Africa",
-            "South Asia"
-          ],
-          "range": [
-            "#1f77b4",
-            "#ff7f0e",
-            "#2ca02c",
-            "#d62728",
-            "#9467bd",
-            "#8c564b",
-            "#e377c2",
-            "#7f7f7f",
-            "#bcbd22",
-            "#17becf",
-            "#f2e63f"
-          ]
-        },
-        "title": "Region",
-        "legend": {
-          "selection": "continent_highlight"
-        }
-      },
-      "opacity": {
-        "condition": {"selection": "continent_highlight", "value": 0.6},
-        "value": 0.2
+      "title": "Region",
+      "legend": {
+        "selection": "continent_highlight"
       }
     },
-    "selection": {
-      "brush": {
-        "type": "interval",
-        "encodings": ["x"],
-        "bind": "scales"
-      },
-      "continent_highlight": {
-        "type": "multi",
-        "fields": ["Regional_Indicator"],
-        "bind": "legend"
-      }
+    "opacity": {
+      "condition": {"selection": "continent_highlight", "value": 0.6},
+      "value": 0.2
     },
-    "title": "Average Freedom Over the Years by Region"
-  }
-  
+    "tooltip": [
+      {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
+      {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom Score"},
+      {"field": "Year", "type": "ordinal", "title": "Year"}
+    ]
+  },
+  "selection": {
+    "brush": {
+      "type": "interval",
+      "encodings": ["x"],
+      "bind": "scales"
+    },
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["Regional_Indicator"],
+      "bind": "legend"
+    }
+  },
+  "title": "Average Freedom Over the Years by Region"
+}
