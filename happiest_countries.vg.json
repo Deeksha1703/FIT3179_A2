@@ -151,9 +151,6 @@
         "color": "black"
       },
       "encoding": {
-        "text": {
-          "value": "World Average Happiness Index"
-        },
         "y": {
           "field": "redLineValue",
           "type": "quantitative",
