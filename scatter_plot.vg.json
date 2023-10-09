@@ -167,17 +167,7 @@
       "encoding": {
         "text": {
           "field": "Country_Name",
-          "type": "nominal",
-          "condition": [
-            {
-              "test": "datum['Country_Name'] == 'Finland'",
-              "value": "Finland \nHappiest Country"
-            },
-            {
-              "test": "datum['Country_Name'] == 'Afghanistan'",
-              "value": "Afghanistan \nLeast Happiest Country"
-            }
-          ]
+          "type": "nominal"
         },
         "x": {
           "field": "Ladder_Score",
