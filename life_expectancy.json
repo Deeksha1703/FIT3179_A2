@@ -854,7 +854,8 @@
     {
         "Country": "Brazil",
         "Year": 2017,
-        "Life_Expectancy": "74.8266"
+        "Life_Expectancy": "74.8266",
+        "Regional_Indicator": "Latin America and Caribbean"
     },
     {
         "Country": "Brazil",
@@ -2497,7 +2498,8 @@
     {
         "Country": "Indonesia",
         "Year": 2018,
-        "Life_Expectancy": "70.3375"
+        "Life_Expectancy": "70.3375",
+        "Regional_Indicator": "Southeast Asia"
     },
     {
         "Country": "Indonesia",
