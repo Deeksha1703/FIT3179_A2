@@ -14,7 +14,7 @@
     "axis": {
       "labelFont": "sans-serif",
       "titleFont": "sans-serif",
-      "labelFontSize": 18,
+      "labelFontSize": 16,
       "titleFontSize": 16,
       "labelLimit": 0
     },
