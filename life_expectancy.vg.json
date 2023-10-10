@@ -3,6 +3,7 @@
   "description": "A vertical box plot showing median, min, and max life expectancy by region in 2021.",
   "height": 600,
   "width": "container",
+  "title": "Life Expectancy in Different Regions Over the Years",
   "data": {
     "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/life_expectancy.json",
     "format": {
@@ -72,6 +73,7 @@
     "color": {
       "field": "Regional_Indicator",
       "type": "nominal",
+      "title": "Region",
       "scale": {
         "domain": [
           "Western Europe",
