@@ -137,26 +137,10 @@
       "encoding": {
         "y": {
           "field": "redLineValue",
-          "type": "quantitative",
-          "title": "World Average Happiness Index"
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 10,
-        "color": "black"
-      },
-      "encoding": {
-        "y": {
-          "field": "redLineValue",
-          "type": "quantitative",
-          "title": "World Average Happiness Index"
+          "type": "quantitative"
         }
       }
     }
+   
   ]
 }
