@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "title": "Top 10 Happiest Countries",
-  "height": 580,
+  "height": 590,
   "data": {
     "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/country_data.json"
   },
