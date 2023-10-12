@@ -125,12 +125,12 @@
         "baseline": "bottom",
         "dx": 5,
         "dy": -5,
-        "fontSize": 12,
+        "fontSize": 15,
         "fontWeight":"lighter"
       },
       "encoding": {
         "text": {"value": "Average Corruption has reduced in Australia and New Zealand"},
-        "x": {"value": 90},
+        "x": {"value": 100},
         "y": {"value": 110}
       }
     }
