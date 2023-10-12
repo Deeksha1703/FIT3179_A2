@@ -124,7 +124,7 @@
       },
       "encoding": {
         "text": {"value": "Sub-Saharan Africa has the least life expectancy"},
-        "x": {"value": 80},
+        "x": {"value": 120},
         "y": {"value": 460}
       }
     },
@@ -140,7 +140,7 @@
       },
       "encoding": {
         "text": {"value": "East Asia has the highest life expectancy"},
-        "x": {"value": 60},
+        "x": {"value": 100},
         "y": {"value": 140}
       }
     }
