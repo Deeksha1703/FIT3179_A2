@@ -2,12 +2,24 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 600,
-  "projection": {"type": "equirectangular"},
+  "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/Deeksha1703/FIT3179_A2/main/world_map_new.topojson",
     "format": {"type": "topojson", "feature": "world_map"}
   },
   "layer": [
+    {
+      "data": {
+        "graticule": {
+          "step": [20, 20]
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "none",
+        "stroke": "#888888"
+      }
+    },
     {
       "transform": [
         {
