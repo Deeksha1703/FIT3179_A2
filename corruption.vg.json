@@ -121,15 +121,16 @@
     {
       "mark": {
         "type": "text",
-        "align": "center",
+        "align": "left",
         "baseline": "bottom",
         "dx": 5,
         "dy": -5,
-        "fontSize": 12
+        "fontSize": 12,
+        "fontWeight":"lighter"
       },
       "encoding": {
         "text": {"value": "Average Corruption has reduced in Australia and New Zealand"},
-        "x": {"value": 0.7},
+        "x": {"value": 0.5},
         "y": {"value": 110}
       }
     }
