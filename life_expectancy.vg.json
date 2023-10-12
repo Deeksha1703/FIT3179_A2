@@ -58,56 +58,91 @@
       "filter": "datum.Country_Name !== 'Central African Republic'"
     }
   ],
-  "mark": {
-    "type": "boxplot",
-    "extent": "min-max"
-  },
-  "encoding": {
-    "x": {
-      "field": "Regional_Indicator",
-      "type": "nominal",
-      "title": "Region",
-      "sort": ["Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Southeast Asia", "East Asia", "Sub-Saharan Africa", "Commonwealth of Independent States", "Central and Eastern Europe", "x"]
-      
-    },
-    "color": {
-      "field": "Regional_Indicator",
-      "type": "nominal",
-      "title": "Region",
-      "scale": {
-        "domain": [
-          "Western Europe",
-          "North America",
-          "Australia and New Zealand",
-          "Middle East and North Africa",
-          "Latin America and Caribbean",
-          "Central and Eastern Europe",
-          "East Asia",
-          "Southeast Asia",
-          "Commonwealth of Independent States",
-          "Sub-Saharan Africa",
-          "South Asia"
-        ],
-        "range": [
-          "#1f77b4",
-          "#ff7f0e",
-          "#2ca02c",
-          "#d62728",
-          "#9467bd",
-          "#8c564b",
-          "#e377c2",
-          "#7f7f7f",
-          "#bcbd22",
-          "#17becf",
-          "#f2e63f"
-        ]
+  "layer": [
+    {
+      "mark": {
+        "type": "boxplot",
+        "extent": "min-max"
+      },
+      "encoding": {
+        "x": {
+          "field": "Regional_Indicator",
+          "type": "nominal",
+          "title": "Region",
+          "sort": ["Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Southeast Asia", "East Asia", "Sub-Saharan Africa", "Commonwealth of Independent States", "Central and Eastern Europe", "x"]
+        },
+        "color": {
+          "field": "Regional_Indicator",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+            "domain": [
+              "Western Europe",
+              "North America",
+              "Australia and New Zealand",
+              "Middle East and North Africa",
+              "Latin America and Caribbean",
+              "Central and Eastern Europe",
+              "East Asia",
+              "Southeast Asia",
+              "Commonwealth of Independent States",
+              "Sub-Saharan Africa",
+              "South Asia"
+            ],
+            "range": [
+              "#1f77b4",
+              "#ff7f0e",
+              "#2ca02c",
+              "#d62728",
+              "#9467bd",
+              "#8c564b",
+              "#e377c2",
+              "#7f7f7f",
+              "#bcbd22",
+              "#17becf",
+              "#f2e63f"
+            ]
+          }
+        },
+        "y": {
+          "field": "Life_Expectancy",
+          "type": "quantitative",
+          "title": "Life Expectancy",
+          "scale": {"zero": false}
+        }
       }
     },
-    "y": {
-      "field": "Life_Expectancy",
-      "type": "quantitative",
-      "title": "Life Expectancy",
-      "scale": {"zero": false}
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 12,
+        "fontWeight":"lighter"
+      },
+      "encoding": {
+        "text": {"value": "Sub-Saharan Africa has the least life expectancy"},
+        "x": {"value": 80},
+        "y": {"value": 460}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 12,
+        "fontWeight":"lighter"
+      },
+      "encoding": {
+        "text": {"value": "East Asia has the highest life expectancy"},
+        "x": {"value": 60},
+        "y": {"value": 140}
+      }
     }
-  }
+  ]
 }
