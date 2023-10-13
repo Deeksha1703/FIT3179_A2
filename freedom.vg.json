@@ -40,81 +40,85 @@
       "groupby": ["Year", "Regional_Indicator", "Country"]
     }
   ],
-  "mark": {
-    "type": "line",
-    "point": {
-      "filled": false,
-      "fill": "white"
-    }
-  },
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal",
-      "title": "Year"
-    },
-    "y": {
-      "field": "Average_Freedom",
-      "type": "quantitative",
-      "title": "Average Freedom Score"
-    },
-    "color": {
-      "field": "Regional_Indicator",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Western Europe",
-          "North America",
-          "Australia and New Zealand",
-          "Middle East and North Africa",
-          "Latin America and Caribbean",
-          "Central and Eastern Europe",
-          "East Asia",
-          "Southeast Asia",
-          "Commonwealth of Independent States",
-          "Sub-Saharan Africa",
-          "South Asia"
-        ],
-        "range": [
-          "#1f77b4",
-          "#ff7f0e",
-          "#2ca02c",
-          "#d62728",
-          "#9467bd",
-          "#8c564b",
-          "#e377c2",
-          "#7f7f7f",
-          "#bcbd22",
-          "#17becf",
-          "#f2e63f"
-        ]
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": false,
+          "fill": "white"
+        }
       },
-      "title": "Region",
-      "legend": {
-        "selection": "continent_highlight"
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year"
+        },
+        "y": {
+          "field": "Average_Freedom",
+          "type": "quantitative",
+          "title": "Average Freedom Score"
+        },
+        "color": {
+          "field": "Regional_Indicator",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Europe",
+              "North America",
+              "Australia and New Zealand",
+              "Middle East and North Africa",
+              "Latin America and Caribbean",
+              "Central and Eastern Europe",
+              "East Asia",
+              "Southeast Asia",
+              "Commonwealth of Independent States",
+              "Sub-Saharan Africa",
+              "South Asia"
+            ],
+            "range": [
+              "#1f77b4",
+              "#ff7f0e",
+              "#2ca02c",
+              "#d62728",
+              "#9467bd",
+              "#8c564b",
+              "#e377c2",
+              "#7f7f7f",
+              "#bcbd22",
+              "#17becf",
+              "#f2e63f"
+            ]
+          },
+          "title": "Region"
+        },
+        "opacity": {
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
+          {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom"},
+          {"field": "Year", "type": "ordinal", "title": "Year"}
+        ]
       }
     },
-    "opacity": {
-      "condition": {"selection": "continent_highlight", "value": 0.6},
-      "value": 0.2
-    },
-    "tooltip": [
-      {"field": "Regional_Indicator", "type": "nominal", "title": "Region"},
-      {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom"},
-      {"field": "Year", "type": "ordinal", "title": "Year"}
-    ]
-  },
-  "selection": {
-    "brush": {
-      "type": "interval",
-      "encodings": ["x"],
-      "bind": "scales"
-    },
-    "continent_highlight": {
-      "type": "multi",
-      "fields": ["Regional_Indicator"],
-      "bind": "legend"
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 14,
+        "dx": 5,
+        "dy": -5,
+        "text": "Text Annotation",
+        "color": "black"
+      },
+      "encoding": {
+        "x": {"value": 20},
+        "y": {"value": 200}
+      }
     }
-  },
+  ],
   "title": "Average Freedom Over the Years by Region"
 }
