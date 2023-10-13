@@ -91,6 +91,7 @@
               "#f2e63f"
             ]
           },
+          "title": "Region",
           "legend": {
             "selection": "continent_highlight"
           }
