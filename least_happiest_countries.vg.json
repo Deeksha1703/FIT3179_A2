@@ -146,11 +146,11 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "fontSize": 14,
-        "fontWeight": "bolder",
+        "fontSize": 15,
+        "fontWeight": "lighter",
         "dx": 5, 
         "dy": -5, 
-        "text": "Red Line Value: 5.53"
+        "text": "The top 10 unhappiest countries rank well below the global happiness average."
       },
       "encoding": {
         "x": {"value": 50},
