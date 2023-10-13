@@ -91,9 +91,13 @@
               "#f2e63f"
             ]
           },
-          "title": "Region"
+          "title": "Region",
+          "legend": {
+            "selection": "continent_highlight"
+          }
         },
         "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
           "value": 0.2
         },
         "tooltip": [
@@ -101,6 +105,18 @@
           {"field": "Average_Freedom", "type": "quantitative", "title": "Average Freedom"},
           {"field": "Year", "type": "ordinal", "title": "Year"}
         ]
+      },
+      "selection": {
+        "brush": {
+          "type": "interval",
+          "encodings": ["x"],
+          "bind": "scales"
+        },
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Regional_Indicator"],
+          "bind": "legend"
+        }
       }
     },
     {
