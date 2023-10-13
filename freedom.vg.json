@@ -112,12 +112,12 @@
         "fontWeight": "lighter",
         "dx": 5,
         "dy": -5,
-        "text": "Australia and New Zealand have consistently had the highest average freedom levels over the years.",
+        "text": "Australia and New Zealand have consistently had the highest average \nfreedom levels over the years.",
         "color": "black"
       },
       "encoding": {
         "x": {"value": 30},
-        "y": {"value": 200}
+        "y": {"value": 250}
       }
     }
   ],
