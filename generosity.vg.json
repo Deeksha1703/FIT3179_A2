@@ -124,13 +124,14 @@
         "align": "left",
         "baseline": "top",
         "fontSize": 15,
+        "fontWeight": "lighter",
         "dx": 5,
         "dy": -5,
         "text": "Generosity has drastically reduced for all regions",
         "color": "black"
       },
       "encoding": {
-        "x": { "value": 40 },
+        "x": { "value": 55 },
         "y": { "value": 450}
       }
     }
