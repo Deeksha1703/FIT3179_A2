@@ -140,7 +140,22 @@
           "type": "quantitative"
         }
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 14,
+        "fontWeight": "bolder",
+        "dx": 5, 
+        "dy": -5, 
+        "text": "Red Line Value: 5.53"
+      },
+      "encoding": {
+        "x": {"value": 50},
+        "y": {"value": 35} 
+      }
     }
-   
   ]
 }
