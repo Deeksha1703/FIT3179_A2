@@ -153,7 +153,7 @@
         "text": "The top 10 unhappiest countries rank well below the global happiness average."
       },
       "encoding": {
-        "x": {"value": 110},
+        "x": {"value": 120},
         "y": {"value": 35} 
       }
     }
